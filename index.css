@@ -3,7 +3,6 @@ main {
 }
 
 #instructions {
-    margin-top: 60px;
     border-style: solid;
     margin-left: 50px;
     margin-right: 50px;
@@ -18,8 +17,13 @@ h1 {
   color: #ffcab0;
   font-size: 65px;
   display: inline;
-  padding-bottom: 20px;
   position: absolute;
+}
+
+h3 {
+  font-size: 25px;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 #snakeImg{
@@ -117,4 +121,5 @@ img {
 ul {
   text-align: left;
   list-style-type: square;
+  font-size: 20px;
 }
