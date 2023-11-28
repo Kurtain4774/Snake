@@ -123,3 +123,13 @@ ul {
   list-style-type: square;
   font-size: 20px;
 }
+
+img, h1, li, .column, h3{
+  pointer-events: none;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
