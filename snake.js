@@ -213,5 +213,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set up the game loop
     intervalId = window.setInterval(function(){
         updateGame();
-      }, 100);
+      }, 200);
 });
