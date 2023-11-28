@@ -16,6 +16,16 @@ main {
 h1 {
   margin-top: 70px;
   color: #ffcab0;
+  font-size: 65px;
+  display: inline;
+  padding-bottom: 20px;
+  position: absolute;
+}
+
+#snakeImg{
+  padding: revert;
+  padding-left: 60px;
+  padding-top: 20px;
 }
   /* Create two equal columns that sits next to each other */
 .column {
