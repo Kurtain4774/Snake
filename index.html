@@ -36,7 +36,15 @@
             </div>
 
             <div id="playSection">
-                <button class="button-56" role="button">Play</button>
+                <button id="play-button" class="button-56" role="button">Play</button>
+
+                <script>
+                    var button = document.getElementById("play-button");
+
+                    button.addEventListener('click', () => {
+                        window.location = "snake.html";
+                    });
+                </script>
             </div>
 
 

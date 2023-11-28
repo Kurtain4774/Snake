@@ -13,6 +13,7 @@ var boardY = viewportHeight;
 
 var leftOffset = 0;
 var topOffset = 0;
+resize();
 
 function resize(){
     viewportHeight = window.innerHeight;
