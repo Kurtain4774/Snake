@@ -1,13 +1,43 @@
-body {
+#body-div {
+    position: fixed;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
     margin-right: 0px;
     margin-bottom: 0px;
 }
-html{
+body{
     background-color: #ffcab0;
 }
+#apple{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+
+  }
 
 #pop-up{
     padding: 8px;
@@ -29,6 +59,8 @@ html{
 #game-div {
     border: 1px solid black;
     background-color: #e0ffcd;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     margin: 0;

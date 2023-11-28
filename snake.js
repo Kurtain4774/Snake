@@ -7,7 +7,7 @@ const Direction = {
 var intervalId;
 var viewportHeight = window.innerHeight;
 var viewportWidth = window.innerWidth;
-
+var body = document.getElementById("body-div");
 var boardX = viewportWidth;
 var boardY = viewportHeight;
 
@@ -20,17 +20,17 @@ function resize(){
     viewportWidth = window.innerWidth;
 
     let marginX = 80 + viewportWidth % 20;
-    let marginY = 80 + viewportHeight % 20;
+    let marginY = 120 + viewportHeight % 20;
     boardX = (viewportWidth - marginX) / 20 - 1;
     boardY = (viewportHeight - marginY) / 20 - 1;
 
     leftOffset = marginX/2;
     topOffset = marginY/2;
 
-    document.body.style.marginLeft = leftOffset + "px";
-    document.body.style.marginTop = topOffset + "px";
-    document.body.style.width = viewportWidth - marginX + 1 + "px";
-    document.body.style.height = viewportHeight - marginY + "px";
+    body.style.marginLeft = leftOffset + "px";
+    body.style.marginTop = topOffset +20+ "px";
+    body.style.width = viewportWidth - marginX + 1 + "px";
+    body.style.height = viewportHeight - marginY + "px";
 
 }
 
