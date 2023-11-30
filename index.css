@@ -135,5 +135,7 @@ img, h1, li, .column, h3{
 }
 
 #SnakeGame {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
