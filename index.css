@@ -41,6 +41,12 @@ body {
     background-color: #e0ffcd;
 }
 
+#SnakeGame2{
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+  height: 100%;
+}
 img {
     padding: 10px;
 }
@@ -48,7 +54,6 @@ img {
 #instructionWords {
     text-align: left;
 }
-
 
 /* CSS */
 .button-56 {
