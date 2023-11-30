@@ -20,7 +20,7 @@ function resize(){
     viewportWidth = window.innerWidth;
 
     let marginX = 80 + viewportWidth % 20;
-    let marginY = 80 + viewportHeight % 20;
+    let marginY = 160 + viewportHeight % 20;
     boardX = (viewportWidth - marginX) / 20 - 1;
     boardY = (viewportHeight - marginY) / 20 - 1;
 
@@ -37,7 +37,7 @@ function resize(){
 
 var direction = 4;
 var pastDirection = direction;
-var score = 1;
+var score = 0;
 var stall = 0;
 var dead = false;
 
@@ -172,9 +172,11 @@ function updateGame() {
 
         let popup = document.createElement("div");
         popup.id = "pop-up";
-        let text = document.createTextNode("Javascript Snake");
+        let text = document.createTextNode("Snake");
 
         let text2 = document.createTextNode("You died :(");
+
+        let text3 = document.createTextNode("You score was: " + score);
 
         popup.appendChild(text);
         
@@ -183,6 +185,10 @@ function updateGame() {
         popup.appendChild(p);
 
         popup.appendChild(text2);
+
+        popup.appendChild(p);
+
+        popup.appendChild(text3);
 
 
         p2 = document.createElement("p");
@@ -211,9 +217,10 @@ function reset(){
     food = generateFood();
     direction = 4;
     pastDirection = direction;
-    score = 1;
+    score = 0;
     stall = 0;
     dead = false;
+    wall = [];
 
     intervalId = window.setInterval(function(){
         updateGame();
