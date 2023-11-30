@@ -44,6 +44,7 @@ var dead = false;
 const gameContainer = document.getElementById('game-div');
 const gridSize = 20;
 let snake = [{ x: Math.floor(boardX/2), y: Math.floor(boardY/2) }];
+let wall = []
 let food = generateFood();
 
 function generateFood() {
@@ -62,6 +63,35 @@ function generateFood() {
                 good = false;
                 break;
             }
+        }
+        if(good){
+            redo = false;
+        }
+        
+    } while(redo);
+    
+    return { x, y };
+}
+
+function generateWall() {
+    var redo = true;
+
+    var x;
+    var y;
+    //regenerate food if the food spawns on top of the snake
+    do{
+        x = Math.floor(Math.random() * (boardX));
+        y = Math.floor(Math.random() * (boardY));
+        
+        var good = true;
+        for(var i = 0; i < snake.length; i++){
+            if(Math.abs(snake[i].x - x) < 3 || Math.abs(snake[i].y - y) < 3){
+                good = false;
+                break;
+            }
+        }
+        if(food.x == x && food.y == y){
+            good = false;
         }
         if(good){
             redo = false;
@@ -106,6 +136,7 @@ function updateGame() {
     if (head.x === food.x && head.y === food.y) {
         // Snake ate the food
         food = generateFood();
+        wall.push(generateWall());
         score++;
         stall += 3;
     } else if(stall != 0){
@@ -120,6 +151,12 @@ function updateGame() {
     } else {
         for(var i = 1; i < snake.length; i++){
             if(head.x == snake[i].x && head.y == snake[i].y){
+                dead = true;
+                break;
+            }
+        }
+        for(var i = 0; i < wall.length; i++){
+            if(head.x == wall[i].x && head.y == wall[i].y){
                 dead = true;
                 break;
             }
@@ -195,6 +232,10 @@ function renderGame() {
 
     // Render food
     renderBlock(food, 'food-block');
+    
+    wall.forEach(block =>
+        renderBlock(block, 'wall-block')
+        );
 }
 
 function renderBlock(position, className) {

@@ -48,7 +48,18 @@ html{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #e7475e;
+
+    background-image: url("./images/apple.jpg");
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.wall-block {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fadc5a;
     margin: 0px;
     padding: 0px;
 }
