@@ -134,3 +134,6 @@ img, h1, li, .column, h3{
   -ms-user-select: none;
 }
 
+#SnakeGame {
+  align-items: center;
+}
