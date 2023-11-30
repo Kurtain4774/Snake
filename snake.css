@@ -6,7 +6,7 @@ body {
     margin-bottom: 0px;
 }
 html{
-    background-color: red;
+    background-color: #ffcab0;
 }
 
 #pop-up{
@@ -28,7 +28,7 @@ html{
 }
 #game-div {
     border: 1px solid black;
-    background-color: blue;
+    background-color: #e0ffcd;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -38,8 +38,8 @@ html{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: yellow;
-    border: 1px solid blue;
+    background-color: #6eaff7;
+    border: 1px solid #e0ffcd;
     margin: 0px;
     padding: 0px;
 }
@@ -48,7 +48,7 @@ html{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: #e7475e;
     margin: 0px;
     padding: 0px;
 }
